@@ -38,7 +38,7 @@ var main_canvas;
 var main_media;
 
 // URL of XHTML namespace. This is needed for generating SVG elements.
-var xhtmlNS = 'http://www.w3.org/1999/xhtml';
+var xhtmlNS = 'https://www.w3.org/1999/xhtml';
 
 // Website that refers to LabelMe:
 var ref;
@@ -79,10 +79,10 @@ var view_Deleted = 0;
 var view_ObjList = true;
 
 // Mechanical Turk variables:
-var LMbaseurl = 'http://' + window.location.host + window.location.pathname;
+var LMbaseurl = 'https://' + window.location.host + window.location.pathname;
 var MThelpPage = 'annotationTools/html/mt_instructions.html';
 var externalSubmitURL = 'https://www.mturk.com/mturk/externalSubmit';
-var externalSubmitURLsandbox = 'https://workersandbox.mturk.com/mturk/externalSubmit';
+var externalSubmitURLsandbox = 'https://www.mturk.com/mturk/externalSubmit';
 var mt_N = 'inf';
 
 var object_choices = '...';

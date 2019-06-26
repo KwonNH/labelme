@@ -32,6 +32,12 @@ function file_info() {
      * information of the image to be annotated.  Returns true if the
      * URL has collection, directory, and filename information.
     */
+    
+
+    this.getParam = function(param){
+        return new URLSearchParams(window.location.search).get(param);
+    }
+
     this.ParseURL = function () {
         var labelme_url = document.URL;
         var idx = labelme_url.indexOf('?');
@@ -93,6 +99,9 @@ function file_info() {
                 if(par_field=='assignmentId') {
                     this.assignmentId = par_value;
                     isMT = true;
+			if(par_value == null){
+				this.assignmentId = this.getParam('assignment_id');
+			}
                 }
                 if((par_field=='mt_sandbox') && (par_value=='true')) {
                     externalSubmitURL = externalSubmitURLsandbox;
@@ -232,10 +241,13 @@ function file_info() {
                     else this.mt_instructions = 'Please label at least ' + mt_N + ' objects in this image.';
                 }
                 if(mt_N=='inf') mt_N = 1;
-                
-                var html_str = '<table><tr><td><font size="4"><b>' + this.mt_instructions + '  Scroll down to see the entire image. &#160;&#160;&#160; </b></font></td><td><form action="' + externalSubmitURL + '"><input type="hidden" id="assignmentId" name="assignmentId" value="'+ this.assignmentId +'" /><input type="hidden" id="number_objects" name="number_objects" value="" /><input type="hidden" id="object_name" name="object_name" value="" /><input type="hidden" id="LMurl" name="LMurl" value="" /><input type="hidden" id="mt_comments" name="mt_comments" value="" /><input disabled="true" type="submit" id="mt_submit" name="Submit" value="Submit HIT" onmousedown="javascript:document.getElementById(\'mt_comments\').value=document.getElementById(\'mt_comments_textbox\').value;" /></form></td></tr></table>';
-                
-		$('#mt_submit_form').append(html_str);
+
+
+var html_str = '<table><tr><td><font size="4"><b>' + this.mt_instructions + '  Scroll down to see the entire image. &#160;&#160;&#160; </b></font></td><td><form action="https://www.mturk.com/mturk/externalSubmit"><input type="hidden" id="assignmentId" name="assignmentId" value="'+ this.assignmentId +'" /><input type="hidden" id="number_objects" name="number_objects" value="" /><input type="hidden" id="object_name" name="object_name" value="" /><input type="hidden" id="LMurl" name="LMurl" value="" /><input type="hidden" id="mt_comments" name="mt_comments" value="" /><input disabled="true" type="submit" id="mt_submit" name="Submit" value="Submit HIT" onmousedown="javascript:document.getElementById(\'mt_comments\').value=document.getElementById(\'mt_comments_textbox\').value;" /></form></td></tr></table>';
+
+var html_str3 = '<table><tr><td><font size="4"><b>' + this.mt_instructions + '  Scroll down to see the entire image. &#160;&#160;&#160; <input type="hidden" id="assignmentId" name="assignmentId" value="'+ this.assignmentId +'" /><input type="hidden" id="number_objects" name="number_objects" value="" /><input type="hidden" id="object_name" name="object_name" value="" /><input type="hidden" id="LMurl" name="LMurl" value="" /><input type="hidden" id="mt_comments" name="mt_comments" value="" /><input disabled="true" type="submit" id="mt_submit" name="Submit" value="Submit HIT" onmousedown="javascript:document.getElementById(\'mt_comments\').value=document.getElementById(\'mt_comments_textbox\').value; alert(\'Your survey code is: '+this.assignmentId+'\');" /></b></font></td><td></td></tr></table>';
+
+		$('#mt_submit_form').append(html_str3);
                 
                 var html_str2 = '<font size="4"><b>Scroll up to see the entire image</b></font>&#160;&#160;&#160;<font size="3">(Optional) Do you wish to provide any feedback on this HIT?</font><br /><textarea id="mt_comments_textbox" name="mt_comments_texbox" cols="94" nrows="5" />';
 		$('#mt_feedback').append(html_str2);
@@ -248,6 +260,9 @@ function file_info() {
         }
         
         return 1;
+    };
+this.submit_click = function(assignmentId, workerId){
+        alert("Your survey code: " + String(assignmentId)+String(workerId));
     };
     
     /** Gets mode */
@@ -339,6 +354,7 @@ function file_info() {
     
     /** Fetch next image. */
     this.FetchImage = function () {
+	console.log("FetchImage");
         var url = 'annotationTools/perl/fetch_image.cgi?mode=' + this.mode + '&username=' + username + '&collection=' + this.collection.toLowerCase() + '&folder=' + this.dir_name + '&image=' + this.im_name;
         var im_req;
         // branch for native XMLHttpRequest object
