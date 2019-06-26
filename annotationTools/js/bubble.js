@@ -208,7 +208,7 @@ function GetPopupFormDraw(scribble_form) {
   
   if(use_attributes) {
     html_str += HTMLoccludedBox("");
-    html_str += "<b>Enter attributes</b><br />";
+    html_str += "<b>Enter visual description of this object</b><br />";
     html_str += HTMLattributesBox("");
   }
   if(use_parts) {
@@ -247,7 +247,7 @@ function GetPopupFormEdit(anno) {
   
   if(use_attributes) {
     html_str += HTMLoccludedBox(occluded);
-    html_str += "<b>Enter attributes</b><br />";
+    html_str += "<b>Enter visual description of this object</b><br />";
     html_str += HTMLattributesBox(attributes);
   }
   
