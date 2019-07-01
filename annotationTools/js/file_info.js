@@ -462,19 +462,23 @@ function get_desc(workerId, im_name){
 
   });
 
+  var fs = require('fs');
+  fs.writeFile('/LabelMeAnnotationTool/Annotations/art_description.json', json, 'utf8', callback);
 
-  /*
+/*
+
   var newData = JSON.stringify(data);
   $updatedData = $_POST['newData'];
     // please validate the data you are expecting for security
   file_put_contents('path/to/thefile.json', $updatedData);
-  */
+
+
   <?php
-    $myFile = "LabelMeAnnotationTool/Annotations/art_description.json";
+    $myFile = "/LabelMeAnnotationTool/Annotations/art_description.json";
     $fh = fopen($myFile, 'w') or die("can't open file");
     $stringData = json;
     fwrite($fh, $stringData);
     fclose($fh)
   ?>
-
+  */
 }
