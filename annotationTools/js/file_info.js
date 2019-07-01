@@ -453,8 +453,8 @@ function get_desc(workerId, im_name){
 
   console.log(new_desc);
 
-  $.getJSON( "../../Annotations/art_description.json", function( data ) {
+  $.getJSON( "/LabelMeAnnotationTool/Annotations/art_description.json", function( data ) {
 
-    data.push(new_desc);
+    data['description'].push(new_desc);
   });
 }
