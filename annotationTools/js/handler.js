@@ -69,7 +69,7 @@ function handler() {
       else new_name = RemoveSpecialChars(adjust_objEnter);
 
       if(document.getElementById('attributes')) new_desc = RemoveSpecialChars(document.getElementById('attributes').value);
-      else new_desc = RemoveSpecialChars(adjust_objEnter);
+      else new_desc = "";
       
       var re = /[a-zA-Z0-9]/;
       if(!re.test(new_name)) {
@@ -254,10 +254,6 @@ function handler() {
 	    return;
 	  }
 
-	  if(!re.test(new_attributes)) {
-	    alert('Please enter a description of the object');
-	    return;
-	  }
 	active_canvas = REST_CANVAS;
 	
 	// Move draw canvas to the back:
@@ -279,6 +275,15 @@ function handler() {
 	   alert('Please enter an object name');
 	   return;
 	}
+
+	if(document.getElementById('attributes')) new_desc = RemoveSpecialChars(document.getElementById('attributes').value);
+      else new_desc = "";
+
+      if(!re.test(new_desc)) {
+	alert('Please enter a description of the object');
+	return;
+      }
+
 	anno = this.QueryToRest();
       }
       
