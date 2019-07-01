@@ -253,6 +253,11 @@ function handler() {
 	    alert('Please enter an object name');
 	    return;
 	  }
+
+	  if(!re.test(RemoveSpecialChars(new_attributes))) {
+	    alert('Please enter an object name');
+	    return;
+	  }
 	active_canvas = REST_CANVAS;
 	
 	// Move draw canvas to the back:
