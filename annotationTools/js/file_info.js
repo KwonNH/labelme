@@ -244,15 +244,18 @@ function file_info() {
                 if(mt_N=='inf') mt_N = 1;
 
 
-        var html_str = '<table><tr><td><font size="4"><b>' + this.mt_instructions + '  Scroll down to see the entire image. &#160;&#160;&#160; </b></font></td><td><form action="https://www.mturk.com/mturk/externalSubmit"><input type="hidden" id="assignmentId" name="assignmentId" value="'+ this.assignmentId +'" /><input type="hidden" id="number_objects" name="number_objects" value="" /><input type="hidden" id="object_name" name="object_name" value="" /><input type="hidden" id="LMurl" name="LMurl" value="" /><input type="hidden" id="mt_comments" name="mt_comments" value="" /><input disabled="true" type="submit" id="mt_submit" name="Submit" value="Submit HIT" onmousedown="javascript:document.getElementById(\'mt_comments\').value=document.getElementById(\'mt_comments_textbox\').value;" /></form></td></tr></table>';
+        var html_str2 = '<font size="4"><b>Describe the painting</b></font>&#160;&#160;&#160;<font size="3">Visual description of the painting</font><br /><textarea id="mt_comments_textbox" name="mt_comments_texbox" cols="94" nrows="5" />';
+		$('#mt_feedback').append(html_str2);
+
+        //var html_str = '<table><tr><td><font size="4"><b>' + this.mt_instructions + '  Scroll down to see the entire image. &#160;&#160;&#160; </b></font></td><td><form action="https://www.mturk.com/mturk/externalSubmit"><input type="hidden" id="assignmentId" name="assignmentId" value="'+ this.assignmentId +'" /><input type="hidden" id="number_objects" name="number_objects" value="" /><input type="hidden" id="object_name" name="object_name" value="" /><input type="hidden" id="LMurl" name="LMurl" value="" /><input type="hidden" id="mt_comments" name="mt_comments" value="" /><input disabled="true" type="submit" id="mt_submit" name="Submit" value="Submit HIT" onmousedown="javascript:document.getElementById(\'mt_comments\').value=document.getElementById(\'mt_comments_textbox\').value;" /></form></td></tr></table>';
 
         var html_str3 = '<table><tr><td><font size="4"><b>' + this.mt_instructions + '  Scroll down to see the entire image. &#160;&#160;&#160; <input type="hidden" id="assignmentId" name="assignmentId" value="'+ this.assignmentId +'" /><input type="hidden" id="number_objects" name="number_objects" value="" /><input type="hidden" id="object_name" name="object_name" value="" /><input type="hidden" id="LMurl" name="LMurl" value="" /><input type="hidden" id="mt_comments" name="mt_comments" value="" /><input disabled="true" type="submit" id="mt_submit" name="Submit" value="Submit HIT" onmousedown="javascript:document.getElementById(\'mt_comments\').value=document.getElementById(\'mt_comments_textbox\').value; get_desc(\''+this.workerId+'\', \''+this.im_name+'\'); alert(\'Your survey code is: Fy2VEDPj\');" /></b></font></td><td></td></tr></table>';
 
 		$('#mt_submit_form').append(html_str3);
                 
-        var html_str2 = '<font size="4"><b>Scroll up to see the entire image</b></font>&#160;&#160;&#160;<font size="3">Describe the painting</font><br /><textarea id="mt_comments_textbox" name="mt_comments_texbox" cols="94" nrows="5" />';
-		$('#mt_feedback').append(html_str2);
-                
+        //var html_str2 = '<font size="4"><b>Scroll up to see the entire image</b></font>&#160;&#160;&#160;<font size="3">Describe the painting</font><br /><textarea id="mt_comments_textbox" name="mt_comments_texbox" cols="94" nrows="5" />';
+		//$('#mt_feedback').append(html_str2);
+
                 if(global_count >= mt_N) document.getElementById('mt_submit').disabled=false;
             }
         }
@@ -449,12 +452,29 @@ function get_desc(workerId, im_name){
   new_desc.worker_id = workerId;
   new_desc.desc = art_desc;
 
-  JSON.stringify(new_desc);
-
   console.log(new_desc);
 
   $.getJSON( "/LabelMeAnnotationTool/Annotations/art_description.json", function( data ) {
 
     data['description'].push(new_desc);
+    var json = JSON.stringify(data);
   });
+
+  var fs = require('fs');
+  fs.writeFile('/LabelMeAnnotationTool/Annotations/art_description.json', json, 'utf8', callback);
+
+  /*
+  var newData = JSON.stringify(data);
+  $updatedData = $_POST['newData'];
+    // please validate the data you are expecting for security
+  file_put_contents('path/to/thefile.json', $updatedData);
+
+  <?php
+    $myFile = "general.json";
+    $fh = fopen($myFile, 'w') or die("can't open file");
+    $stringData = $_GET["data"];
+    fwrite($fh, $stringData);
+    fclose($fh)
+  ?>
+  */
 }
