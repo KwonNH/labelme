@@ -250,7 +250,7 @@ function file_info() {
 
 		$('#mt_submit_form').append(html_str3);
                 
-                var html_str2 = '<font size="4"><b>Scroll up to see the entire image</b></font>&#160;&#160;&#160;<font size="3">Describe the painting</font><br /><textarea id="mt_comments_textbox" name="mt_comments_texbox" cols="94" nrows="5" />';
+        var html_str2 = '<font size="4"><b>Scroll up to see the entire image</b></font>&#160;&#160;&#160;<font size="3">Describe the painting</font><br /><textarea id="mt_comments_textbox" name="mt_comments_texbox" cols="94" nrows="5" />';
 		$('#mt_feedback').append(html_str2);
                 
                 if(global_count >= mt_N) document.getElementById('mt_submit').disabled=false;
@@ -443,13 +443,18 @@ function get_desc(workerId, im_name){
 
   var art_desc = document.getElementById("mt_comments_textbox").value;
 
-  var arr = new Object();
+  var new_desc = new Object();
 
-  arr.img_name = im_name;
-  arr.worker_id = workerId;
-  arr.desc = art_desc;
+  new_desc.img_name = im_name;
+  new_desc.worker_id = workerId;
+  new_desc.desc = art_desc;
 
-  JSON.stringify(arr);
+  JSON.stringify(new_desc);
 
   console.log(arr);
+
+  $.getJSON( "../Annotations/art_description.json", function( data ) {
+
+    data.push(new_desc);
+  });
 }
