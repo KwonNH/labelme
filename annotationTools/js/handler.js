@@ -254,8 +254,8 @@ function handler() {
 	    return;
 	  }
 
-	  if(!re.test(RemoveSpecialChars(new_attributes))) {
-	    alert('Please enter an object name');
+	  if(!re.test(new_attributes)) {
+	    alert('Please enter a description of the object');
 	    return;
 	  }
 	active_canvas = REST_CANVAS;
