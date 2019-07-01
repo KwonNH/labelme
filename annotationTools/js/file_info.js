@@ -451,7 +451,7 @@ function get_desc(workerId, im_name){
 
   JSON.stringify(new_desc);
 
-  console.log(arr);
+  console.log(new_desc);
 
   $.getJSON( "../Annotations/art_description.json", function( data ) {
 
