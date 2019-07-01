@@ -458,10 +458,10 @@ function get_desc(workerId, im_name){
 
     data['description'].push(new_desc);
     var json = JSON.stringify(data);
+    console.log(json);
+
   });
 
-  var fs = require('fs');
-  fs.writeFile('/LabelMeAnnotationTool/Annotations/art_description.json', json, 'utf8', callback);
 
   /*
   var newData = JSON.stringify(data);

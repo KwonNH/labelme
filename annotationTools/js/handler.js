@@ -64,8 +64,12 @@ function handler() {
       // object name
       old_name = LMgetObjectField(LM_xml,anno.anno_id,'name');
       old_desc = LMgetObjectField(LM_xml,anno.anno_id,'attributes');
+
       if(document.getElementById('objEnter')) new_name = RemoveSpecialChars(document.getElementById('objEnter').value);
       else new_name = RemoveSpecialChars(adjust_objEnter);
+
+      if(document.getElementById('attributes')) new_desc = RemoveSpecialChars(document.getElementById('attributes').value);
+      else new_desc = RemoveSpecialChars(adjust_objEnter);
       
       var re = /[a-zA-Z0-9]/;
       if(!re.test(new_name)) {
@@ -73,8 +77,8 @@ function handler() {
 	return;
       }
 
-      if(!re.test(old_desc)) {
-	alert('Please enter a description of an object');
+      if(!re.test(new_desc)) {
+	alert('Please enter a description of the object');
 	return;
       }
       
