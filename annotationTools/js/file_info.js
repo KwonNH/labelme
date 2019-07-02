@@ -460,8 +460,28 @@ function get_desc(workerId, im_name){
     var json = JSON.stringify(data);
 
     console.log(json);
-    var fs = require('fs');
-    fs.writeFile('/LabelMeAnnotationTool/Annotations/art_description.json', json, 'utf8', callback);
+
+    /*
+    $.ajax({
+    type: "POST",
+    url: 'annotationTools/perl/submit.cgi',
+    data: json,
+    contentType: "application/json",
+    dataType: "json",
+    success: SuccessFunction,
+    error: function(xhr,ajaxOptions,thrownError) {
+      console.log(xhr.status);
+      console.log(thrownError);
+    }
+  });
+  */
+
+  $.ajax({
+    url: '/LabelMeAnnotationTool/Annotations/art_description.json',
+    type: 'POST',
+    dataType: 'json',//no need for setting this to JSON if you don't receive a json response.
+    data: json,
+    })
 
   });
 
