@@ -454,12 +454,14 @@ function get_desc(workerId, im_name){
 
   console.log(new_desc);
 
-  $.getJSON( "/LabelMeAnnotationTool/Annotations/art_description.json", function( data ) {
+  var json = $.getJSON( "/LabelMeAnnotationTool/Annotations/art_description.json", function( data ) {
 
     data['description'].push(new_desc);
     var json = JSON.stringify(data);
 
     console.log(json);
+
+    return json;
 
     /*
     $.ajax({
@@ -476,14 +478,16 @@ function get_desc(workerId, im_name){
   });
   */
 
+
+
+  });
+
   $.ajax({
     url: '/LabelMeAnnotationTool/Annotations/art_description.json',
     type: 'POST',
     dataType: 'json',//no need for setting this to JSON if you don't receive a json response.
     data: json
     });
-
-  });
 
 /*
 
