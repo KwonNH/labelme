@@ -480,8 +480,8 @@ function get_desc(workerId, im_name){
     url: '/LabelMeAnnotationTool/Annotations/art_description.json',
     type: 'POST',
     dataType: 'json',//no need for setting this to JSON if you don't receive a json response.
-    data: json,
-    })
+    data: json
+    });
 
   });
 
