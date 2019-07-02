@@ -454,6 +454,7 @@ function get_desc(workerId, im_name){
 
   console.log(new_desc);
 
+/*
   var json = $.getJSON( "/LabelMeAnnotationTool/Annotations/art_description.json", function( data ) {
 
     data['description'].push(new_desc);
@@ -463,7 +464,7 @@ function get_desc(workerId, im_name){
 
     return json;
 
-    /*
+
     $.ajax({
     type: "POST",
     url: 'annotationTools/perl/submit.cgi',
@@ -476,17 +477,17 @@ function get_desc(workerId, im_name){
       console.log(thrownError);
     }
   });
-  */
+
 
 
 
   });
-
+*/
   $.ajax({
-    url: '/LabelMeAnnotationTool/Annotations/art_description.json',
+    url: '/LabelMeAnnotationTool/Annotations',
     type: 'POST',
     dataType: 'json',//no need for setting this to JSON if you don't receive a json response.
-    data: json
+    data: new_desc
     });
 
 /*
