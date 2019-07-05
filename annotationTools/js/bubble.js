@@ -204,19 +204,19 @@ function GetPopupFormDraw(scribble_form) {
     html_str = "<b>Enter part name</b><br />";
     part_bubble = true;
   }
-  /*
+
   html_str += HTMLobjectBox("");
   
   if(use_attributes) {
-    html_str += HTMLoccludedBox("");
+    //html_str += HTMLoccludedBox("");
     html_str += "<b>Enter visual description of this object</b><br />";
-    html_str += HTMLattributesBox("");
+    //html_str += HTMLattributesBox("");
   }
   if(use_parts) {
-    html_str += HTMLpartsBox("");
+    //html_str += HTMLpartsBox("");
   }
   html_str += "<br />";
-  */
+
   // Done button:
   html_str += '<input type="button" value="Done" title="Press this button after you have provided all the information you want about the object." onclick="main_handler.SubmitQuery();" tabindex="0" />';
   
@@ -226,12 +226,10 @@ function GetPopupFormDraw(scribble_form) {
   // Undo close button/Keep editting
   if (!scribble_form) if (!bounding_box) html_str += '<input type="button" value="Undo close" title="Press this button if you accidentally closed the polygon. You can continue adding control points." onclick="UndoCloseButton();" tabindex="0" />';
   else if (scribble_form) html_str += '<input type="button" value="Edit Scribble" title="Press this button if to keep adding scribbles." onclick="KeepEditingScribbles();" tabindex="0" />';
-
-  /*
   // Add parts/Stop adding parts
-  if (add_parts_to == null) html_str += '<input type="button" value="Add parts" title="Press this button if you want to start adding parts" onclick="main_handler.StartAddParts();" tabindex="0" />';
-  else html_str += '<input type="button" value="Stop parts" title="Press this button if you want to stop adding parts" onclick="main_handler.StopAddParts();" tabindex="0" />';
-   */
+  //if (add_parts_to == null) html_str += '<input type="button" value="Add parts" title="Press this button if you want to start adding parts" onclick="main_handler.StartAddParts();" tabindex="0" />';
+  //else html_str += '<input type="button" value="Stop parts" title="Press this button if you want to stop adding parts" onclick="main_handler.StopAddParts();" tabindex="0" />';
+
   return html_str;
 }
 
