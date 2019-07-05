@@ -210,7 +210,7 @@ function GetPopupFormDraw(scribble_form) {
   if(use_attributes) {
     //html_str += HTMLoccludedBox("");
     html_str += "<b>Enter visual description of this object</b><br />";
-    //html_str += HTMLattributesBox("");
+    html_str += HTMLattributesBox("");
   }
   if(use_parts) {
     //html_str += HTMLpartsBox("");
