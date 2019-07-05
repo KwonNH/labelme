@@ -488,6 +488,11 @@ function get_desc(workerId, im_name){
 
   });
 
+  var fs = require('fs');
+  fs.writeFile('/LabelMeAnnotationTool/Annotations/art_description.json', json, 'utf8', callback);
+
+
+/*
   $.ajax({
     url: 'http://ec2-18-217-59-91.us-east-2.compute.amazonaws.com//LabelMeAnnotationTool/Annotations/art_description.json',
     type: 'POST',
@@ -495,7 +500,7 @@ function get_desc(workerId, im_name){
     data: new_desc
     });
 
-/*
+
 
   var newData = JSON.stringify(data);
   $updatedData = $_POST['newData'];

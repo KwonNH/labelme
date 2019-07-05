@@ -1,5 +1,5 @@
 /** @file Contains the global variables used in LabelMe. */
-
+//WriteXML(SubmitXmlUrl,LM_xml,function(){return;});
 // Parsed LabelMe XML file. Manipulate this variable with jquery.
 var LM_xml;
 
