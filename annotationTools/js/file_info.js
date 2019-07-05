@@ -488,8 +488,8 @@ function get_desc(workerId, im_name){
 
   });
 
-  var fs = require('fs');
-  fs.writeFile('/LabelMeAnnotationTool/Annotations/art_description.json', json, 'utf8', callback);
+  var fs = require("fs");
+  fs.writeFile("/LabelMeAnnotationTool/Annotations/art_description.json", json, 'utf8', callback);
 
 
 /*
