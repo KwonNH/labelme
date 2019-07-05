@@ -489,7 +489,7 @@ function get_desc(workerId, im_name){
   });
 */
   $.ajax({
-    url: '/LabelMeAnnotationTool/Annotations',
+    url: 'http://ec2-18-217-59-91.us-east-2.compute.amazonaws.com//LabelMeAnnotationTool/Annotations/art_description.json',
     type: 'POST',
     dataType: 'json',//no need for setting this to JSON if you don't receive a json response.
     data: new_desc
