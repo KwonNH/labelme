@@ -444,7 +444,7 @@ function file_info() {
 
 function provide_code(){
     var number_objects = document.querySelector('#number_objects').value;
-    alert(number_objects);
+    alert'ZCgDVlkp'+String(number_objects);
 }
 
 function get_desc(workerId, im_name){
