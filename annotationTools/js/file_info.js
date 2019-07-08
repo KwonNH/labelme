@@ -466,10 +466,6 @@ function get_desc(workerId, im_name){
     data['description'].push(new_desc);
     json_desc = JSON.stringify(data);
 
-    //console.log(json);
-  console.log(json);
-
-
   });
 
 
