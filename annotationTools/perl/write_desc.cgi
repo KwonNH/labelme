@@ -1,4 +1,5 @@
 #!/usr/bin/perl
+#!/usr/local/bin/php
 require 'globalvariables.pl';
 require 'logfile_helper.pl';
 
