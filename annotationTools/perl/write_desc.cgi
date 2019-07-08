@@ -14,7 +14,7 @@ $stdin =~ tr/\r//d;
 
 ##############################
 # Write to logfile:
-open(FP,">>$LM_HOME/Annotations/test.txt");
+open(FP,">>$LM_HOME/Annotations/art_description.txt");
 print FP "$stdin";
 close(FP);
 
