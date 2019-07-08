@@ -475,7 +475,6 @@ function get_desc(workerId, im_name){
     data: json_desc,
     contentType: "application/json",
     dataType: "json",
-    success: SuccessFunction,
     error: function(xhr,ajaxOptions,thrownError) {
       console.log(xhr.status);
       console.log(thrownError);
