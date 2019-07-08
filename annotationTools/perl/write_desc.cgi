@@ -17,7 +17,7 @@ $stdin =~ tr/\r//d;
 ##############################
 # Write to logfile:
 open(FP,">>$LM_HOME/Annotations/art_description.txt");
-print FP "\n$img_name $worker_id $desc";
+print FP "\n$stdin";
 close(FP);
 
 print "Content-type: text/xml\n\n" ;
