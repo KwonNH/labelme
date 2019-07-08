@@ -457,24 +457,22 @@ function get_desc(workerId, im_name){
   new_desc.worker_id = workerId;
   new_desc.desc = art_desc;
 
-  //console.log(new_desc);
-
   var json_desc = null;
-
+  /*
   $.getJSON( "/LabelMeAnnotationTool/Annotations/art_description.json", function( data ) {
 
     data['description'].push(new_desc);
     json_desc = JSON.stringify(data);
 
   });
-
+  */
 
     $.ajax({
     type: "POST",
     url: 'annotationTools/perl/write_desc.cgi',
-    data: json_desc,
-    contentType: "application/json",
-    dataType: "json",
+    data: new_desc,
+    contentType: "text/xml",
+    dataType: "text",
     error: function(xhr,ajaxOptions,thrownError) {
       console.log(xhr.status);
       console.log(thrownError);

@@ -1,5 +1,4 @@
 #!/usr/bin/perl
-#!/usr/local/bin/php
 require 'globalvariables.pl';
 require 'logfile_helper.pl';
 
@@ -15,9 +14,9 @@ $stdin =~ tr/\r//d;
 
 ##############################
 # Write to logfile:
-open(FP,">>$LM_HOME/Annotations/art_description.json");
+open(FP,">>$LM_HOME/Annotations/test.txt");
 print FP "$stdin";
 close(FP);
 
-print "Content-type: application/json" ;
+print "Content-type: text/xml\n\n" ;
 print "<nop/>\n";
