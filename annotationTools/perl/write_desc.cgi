@@ -7,12 +7,13 @@ require 'logfile_helper.pl';
 read(STDIN, $stdin, $ENV{'CONTENT_LENGTH'});
 #$stdin = <STDIN>;
 
+# Remove newlines from annotation information:
+$stdin =~ s/\n//g;
+
 # Remove ^M from stdin:
 #$stdin =~ s/'\t'/''/g;
 $stdin =~ tr/\t//d;
 $stdin =~ tr/\r//d;
-
-
 
 ##############################
 # Write to logfile:
