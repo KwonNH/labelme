@@ -12,11 +12,13 @@ read(STDIN, $stdin, $ENV{'CONTENT_LENGTH'});
 $stdin =~ tr/\t//d;
 $stdin =~ tr/\r//d;
 
+
+
 ##############################
 # Write to logfile:
 open(FP,">>$LM_HOME/Annotations/art_description.txt");
-print FP "$stdin";
+print FP "\n$img_name $worker_id $desc";
 close(FP);
 
 print "Content-type: text/xml\n\n" ;
-print "<nop/>\n\n";
+print "<nop/>\n";
