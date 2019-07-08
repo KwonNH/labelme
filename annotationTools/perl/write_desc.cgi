@@ -19,4 +19,4 @@ print FP "$stdin";
 close(FP);
 
 print "Content-type: text/xml\n\n" ;
-print "<nop/>\n";
+print "<nop/>\n\n";
