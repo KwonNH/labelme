@@ -459,7 +459,7 @@ function get_desc(workerId, im_name){
 
   //console.log(new_desc);
 
-  var json = null;
+  var json_desc = null;
 
   $.getJSON( "/LabelMeAnnotationTool/Annotations/art_description.json", function( data ) {
 
