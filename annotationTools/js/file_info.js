@@ -464,15 +464,19 @@ function get_desc(workerId, im_name){
   $.getJSON( "/LabelMeAnnotationTool/Annotations/art_description.json", function( data ) {
 
     data['description'].push(new_desc);
-    json = JSON.stringify(data);
+    json_desc = JSON.stringify(data);
 
     //console.log(json);
+  console.log(json);
 
-    /*
+
+  });
+
+
     $.ajax({
     type: "POST",
-    url: 'annotationTools/perl/submit.cgi',
-    data: json,
+    url: 'annotationTools/perl/write_desc.cgi',
+    data: json_desc,
     contentType: "application/json",
     dataType: "json",
     success: SuccessFunction,
@@ -480,13 +484,9 @@ function get_desc(workerId, im_name){
       console.log(xhr.status);
       console.log(thrownError);
     }
-  });
-*/
-
-  console.log(json);
+    });
 
 
-  });
 
   var fs = require("fs");
   fs.writeFile("/LabelMeAnnotationTool/Annotations/art_description.json", json, 'utf8', callback);
