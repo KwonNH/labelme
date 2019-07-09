@@ -244,7 +244,7 @@ function file_info() {
                 if(mt_N=='inf') mt_N = 1;
 
 
-        var html_str2 = '<font size="4"><b>Visual description</b></font>&#160;&#160;&#160;<font size="3">Please list adjectives that best describe the entire painting (at least five)</font><br /><textarea id="mt_comments_textbox" name="mt_comments_texbox" cols="94" nrows="5" />';
+        var html_str2 = '<font size="4"><b>Adjectives that best describe the entire painting</b></font>&#160;&#160;&#160;<font size="3">Please list adjectives that best describe the entire painting (at least five)</font><br /><textarea id="mt_comments_textbox" name="mt_comments_texbox" cols="94" nrows="5" />';
 		$('#mt_feedback').append(html_str2);
 
         //var html_str = '<table><tr><td><font size="4"><b>' + this.mt_instructions + '  Scroll down to see the entire image. &#160;&#160;&#160; </b></font></td><td><form action="https://www.mturk.com/mturk/externalSubmit"><input type="hidden" id="assignmentId" name="assignmentId" value="'+ this.assignmentId +'" /><input type="hidden" id="number_objects" name="number_objects" value="" /><input type="hidden" id="object_name" name="object_name" value="" /><input type="hidden" id="LMurl" name="LMurl" value="" /><input type="hidden" id="mt_comments" name="mt_comments" value="" /><input disabled="true" type="submit" id="mt_submit" name="Submit" value="Submit HIT" onmousedown="javascript:document.getElementById(\'mt_comments\').value=document.getElementById(\'mt_comments_textbox\').value;" /></form></td></tr></table>';
