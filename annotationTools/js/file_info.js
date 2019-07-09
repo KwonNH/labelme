@@ -238,7 +238,7 @@ function file_info() {
             if(this.mode=='mt') {
                 if(!this.mt_instructions) {
                     if(mt_N=='inf') this.mt_instructions = 'Please label as many objects as you want in this image.';
-                    else if(mt_N==1) this.mt_instructions = 'Please label at least ' + mt_N + ' object in this image.';
+                    else if(mt_N==1) this.mt_instructions = 'Please label as many objects as you want in this image.(at least ' + mt_N + ' objects)';
                     else this.mt_instructions = 'Please label at least ' + mt_N + ' objects in this image.';
                 }
                 if(mt_N=='inf') mt_N = 1;
