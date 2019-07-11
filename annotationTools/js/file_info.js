@@ -444,7 +444,7 @@ function file_info() {
 
 function provide_code(){
     var number_objects = document.querySelector('#number_objects').value;
-    alert('ZCgDVlkp'+String(number_objects));
+    alert('Thank you for completing the task. Please enter your survey code below to claim your reward.\nsurvey code: ZCgDVlkp'+String(number_objects));
 }
 
 function get_desc(workerId, im_name){
