@@ -1,0 +1,230 @@
+<!DOCTYPE html PUBLIC
+"-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:svg="http://www.w3.org/2000/svg" 
+      xmlns:xlink="http://www.w3.org/1999/xlink">
+<head>
+  <meta charset="utf-8" />
+  <title>Artwork Image Annotation</title>
+  <link rel="stylesheet" href="annotationTools/css/qunit-1.17.1.css" />
+    <style>
+        #instruction {
+          padding-top: 20px;
+          padding-right: 30px;
+          padding-bottom: 10px;
+          padding-left: 18%;
+        }
+        h1{
+          font-size: 35px;
+          line-height: 0.5em;
+        }
+        h2{
+          font-size: 30px;
+          line-height: 0.8em;
+        }
+        h3{
+          font-size: 23px;
+          line-height: 0.9em;
+        }
+        h4{
+          font-size: 18px;
+          line-height: 0.4em;
+        }
+        #textbox{
+          padding-bottom: 100px;
+        }
+    </style>
+
+</head>
+<body>
+  <center>
+
+<h1>
+    Artwork Image Annotation
+</h1>
+  </center>
+
+     <div id="instruction">
+         <h2>
+          Object Labeling and Image Description Task
+         </h2>
+      <h3>
+          Please read the instructions below and enter your <font color="#006699">Worker ID</font> to get started! :)
+      </h3>
+
+         <h2 style="padding-left: 20px">
+             Instructions
+         </h2>
+
+         <h4 style="padding-left: 40px">
+             For each object:
+         </h4>
+
+         <h3 style="padding-left: 40px">
+             Step 1. Draw a shape around the object.
+         </h3>
+
+         <h4 style="padding-left: 60px">
+             ● Follow the boundary of the object it contains with clicks.
+         </h4>
+         <h4 style="padding-left: 80px">
+             ○ A straight line will show up connecting two successive clicked points.
+         </h4>
+         <h4 style="padding-left: 80px">
+             ○ Connect the last click point with the first one to complete a shape.
+         </h4>
+         <h4 style="padding-left: 60px">
+             ● If an object has several parts, please draw a shape for the parts as well as the whole object
+         </h4>
+         <h4 style="padding-left: 120px">
+             (e.g., face, eyes, nose, lips instead of just face)
+         </h4>
+
+         <h4 style="padding-left: 80px">
+             ○ *Examples:
+         </h4>
+         <h4 style="padding-left: 100px">
+             □ Good example
+         </h4>
+         <h4 style="padding-left: 160px">
+             <img src="./Icons/inst_img/s1_good.png" width="40%" height="40%">
+         </h4>
+         <h4 style="padding-left: 160px">
+             <img src="./Icons/inst_img/s1_good_2.png" width="40%" height="40%">
+         </h4>
+         <h4 style="padding-left: 100px">
+             □ Bad example
+         </h4>
+         <h4 style="padding-left: 160px">
+             <img src="./Icons/inst_img/s1_bad.png" width="40%" height="40%">
+         </h4>
+         <h4 style="padding-left: 160px">
+             <img src="./Icons/inst_img/s1_bad_2.png" width="40%" height="40%">
+         </h4>
+
+
+         <h3 style="padding-left: 40px">
+             Step 2. Enter object name and visual description of the object.
+         </h3>
+         <h4 style="padding-left: 60px">
+             ● Enter object name.
+         </h4>
+         <h4 style="padding-left: 60px">
+             ● Enter a visual description of the object.
+         </h4>
+         <h4 style="padding-left: 80px">
+             ○ Please list at least three keywords that best describe the object (location, color, size, shape, texture, etc.)
+         </h4>
+         <h4 style="padding-left: 120px">
+             or the person (gender, age, cloth, posture, facial expression, etc.)
+         </h4>
+
+         <h4 style="padding-left: 80px">
+             ○ Please note that there is no correct description. Please write down the words however you see or feel.
+         </h4>
+         <h4 style="padding-left: 60px">
+             ● Press the “Done” button
+         </h4>
+         <h4 style="padding-left: 60px">
+             ● Enter visual description of the object.
+         </h4>
+         <h4 style="padding-left: 80px">
+             ○ *Examples:
+         </h4>
+         <h4 style="padding-left: 100px">
+             □ Good example
+         </h4>
+         <h4 style="padding-left: 160px">
+             <img src="./Icons/inst_img/s2_good.png" width="40%" height="40%">
+         </h4>
+         <h4 style="padding-left: 100px">
+             □ Bad example
+         </h4>
+         <h4 style="padding-left: 160px">
+             <img src="./Icons/inst_img/s2_bad.png" width="40%" height="40%">
+         </h4>
+
+
+         <h3 style="padding-left: 40px">
+             Step 3. Choose the next object of your choice and go to Step 1
+         </h3>
+         <h4 style="padding-left: 60px">
+             ● Repeat this for at least 5 objects.
+         </h4>
+         <h4 style="padding-left: 60px">
+             ● Bonuses will be awarded for completing the task with the highest number of objects.
+         </h4>
+
+
+         <h3 style="padding-left: 40px">
+             Step 4. Enter visual description of the entire painting after completing the labeling task.
+         </h3>
+         <h4 style="padding-left: 60px">
+             ● <font color="red">Please list at least five keywords that best describe the entire painting.</font>
+         </h4>
+         <h4 style="padding-left: 60px">
+             ● <font color="red">Again, </font>please note that there is no correct description. Please write down the words however you see or feel.
+         </h4>
+
+         <h4 style="padding-left: 100px">
+             □ Good example
+         </h4>
+         <h4 style="padding-left: 160px">
+             <img src="./Icons/inst_img/s4_ex.png" width="60%" height="60%">
+         </h4>
+
+
+         <h3 style="padding-left: 40px">
+             Step 5. Press “submit HIT” button to get your survey code
+         </h3>
+         <h4 style="padding-left: 60px">
+             ● You can enter this code to mTurk survey page to claim your reward.
+         </h4>
+
+         <h4 style="padding-left: 100px">
+             □ Completed example
+         </h4>
+         <h4 style="padding-left: 160px">
+             <img src="./Icons/inst_img/s5_ex.png" width="50%" height="50%">
+         </h4>
+
+
+
+
+
+     </div>
+
+  <center>
+
+      <h3>
+          You can use Chrome, Firefox, Safari as a web browser, but <font color="red">DO NOT USE Internet Explorer.</font>
+      </h3>
+
+<h2>
+
+    Now, before you start your hit, enter your <font color="#006699">Worker ID</font> below.
+</h2>
+
+  <div id="textbox">
+      <input type="text" id="worker_id" value="WorkerID">
+
+      <button onclick="var workerid = get_worker_id();
+     window.open('http://ec2-18-217-59-91.us-east-2.compute.amazonaws.com//LabelMeAnnotationTool/tool.html?collection=art&mode=mt&folder=art&image=grande_jatte.jpg&N=5&viewobj=n&username='+workerid);">Submit</button>
+
+  </div>
+  </center>
+
+<script>
+function get_worker_id() {
+  var name = document.getElementById("worker_id").value;
+  return name;
+}
+function test(){
+    console.log("test");
+}
+</script>
+
+
+</body>
+</html>
