@@ -247,13 +247,13 @@ function GetPopupFormEdit(anno) {
   html_str += HTMLobjectBox(obj_name);
   
   if(use_attributes) {
-    html_str += HTMLoccludedBox(occluded);
+    //html_str += HTMLoccludedBox(occluded);
     html_str += "<b>Enter adjectives that best describe the object(e.g., color, shape, location, texture)</b><br />";
     html_str += HTMLattributesBox(attributes);
   }
   
   if(use_parts) {
-    html_str += HTMLpartsBox(parts);
+    //html_str += HTMLpartsBox(parts);
   }
   
   html_str += "<br />";
@@ -271,16 +271,16 @@ function GetPopupFormEdit(anno) {
   html_str += '<input type="button" style="float:right" value="Delete" title="Press this button if you wish to delete the polygon." onclick="main_handler.EditBubbleDeleteButton();" tabindex="0" /><br />';
   // Adjust polygon button:
   if (anno.GetType() == 0) {
-    html_str += '<input type="button" value="Adjust polygon" title="Press this button if you wish to update the polygon\'s control points." onclick="javascript:AdjustPolygonButton();" />';
+    //html_str += '<input type="button" value="Adjust polygon" title="Press this button if you wish to update the polygon\'s control points." onclick="javascript:AdjustPolygonButton();" />';
   }
   else {
-    html_str += '<input type="button" value="Edit Scribbles" title="Press this button if you wish to update the segmentation." onclick="javascript:EditBubbleEditScribble();" />';  
+    //html_str += '<input type="button" value="Edit Scribbles" title="Press this button if you wish to update the segmentation." onclick="javascript:EditBubbleEditScribble();" />';
   }
   /*************************************************************/
   /*************************************************************/
   
   // Add parts/Stop adding parts
-  if (add_parts_to == null) html_str += '<input type="button" value="Add parts" title="Press this button if you want to start adding parts" onclick="main_handler.StartAddParts();" tabindex="0" />';
+  if (add_parts_to == null) //html_str += '<input type="button" value="Add parts" title="Press this button if you want to start adding parts" onclick="main_handler.StartAddParts();" tabindex="0" />';
   
   return html_str;
 }
