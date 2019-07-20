@@ -212,7 +212,7 @@ function DrawCanvasClosePolygon() {
   // Render annotation:
   query_anno = anno;
   query_anno.SetDivAttach('query_canvas');
-  //FillPolygon(query_anno.DrawPolygon(main_media.GetImRatio(), draw_x, draw_y));
+  DrawPolygon(query_anno.DrawPolygon(main_media.GetImRatio(), draw_x, draw_y));
 }
 
 /** Handles when the user presses the undo close button in response to
