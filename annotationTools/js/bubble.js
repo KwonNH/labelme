@@ -209,7 +209,7 @@ function GetPopupFormDraw(scribble_form) {
   
   if(use_attributes) {
     //html_str += HTMLoccludedBox("");
-    html_str += "<b>please list at least three keywords that best describe the object (location, color, size, shape, texture, etc.) or the person (gender, age, cloth, posture, facial expression, etc.)</b><br />";
+    html_str += "<b>Please list at least three keywords that best describe the object (location, color, size, shape, texture, etc.) or the person (gender, age, cloth, posture, facial expression, etc.)</b><br />";
     html_str += HTMLattributesBox("");
   }
   if(use_parts) {
@@ -248,7 +248,7 @@ function GetPopupFormEdit(anno) {
   
   if(use_attributes) {
     //html_str += HTMLoccludedBox(occluded);
-    html_str += "<b>please list at least three keywords that best describe the object (location, color, size, shape, texture, etc.) or the person (gender, age, cloth, posture, facial expression, etc.)</b><br />";
+    html_str += "<b>Please list at least three keywords that best describe the object (location, color, size, shape, texture, etc.) or the person (gender, age, cloth, posture, facial expression, etc.)</b><br />";
     html_str += HTMLattributesBox(attributes);
   }
   
