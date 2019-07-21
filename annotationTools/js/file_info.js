@@ -255,13 +255,13 @@ function file_info() {
 
 		var html_str4 = '<div id= "polygonDiv" class="annotatemenu">Polygon<br></br>Tool \
         <button id="polygon" class="labelBtnDraw" type="button" title="Start Polygon" onclick="javascript:main_media.Zoom(1.15)" > \
-        <img id="polygonModeImg" src="Icons/zoomin.png"  width="28" height="38" /> \
+        <img id="polygonModeImg" src="Icons/zoomin.png"  width="18" height="20" /> \
         </button> \
         <button id="erase" class="labelBtnDraw" type="button" title="Delete last segment" onclick="javascript:main_media.Zoom(1.0/1.15)" > \
-        <img src="Icons/zoomout.png"  width="28" height="38" /> \
+        <img src="Icons/zoomout.png" width="18" height="20" /> \
         </button> ';
         if (bbox_mode) html_str4 += ' <button id="bounding_box" class="labelBtnDraw" type="button" title="Start bounding box" onclick="javascript:main_media.Zoom(\'fitted\')" > \
-        <img src="Icons/fitscreen.png"  width="28" height="38" /> \
+        <img src="Icons/fitscreen.png"  width="18" height="20"  /> \
         </button> ';
     html_str4 += '</div>';
                 
