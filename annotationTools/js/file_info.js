@@ -260,7 +260,7 @@ function file_info() {
         <button id="erase" class="labelBtnDraw" type="button" title="Delete last segment" onclick="main_handler.EraseSegment()" > \
         <img src="Icons/erase.png"  width="28" height="38" /> \
         </button> ';
-        if (bbox_mode) //html_str += ' <button id="bounding_box" class="labelBtnDraw" type="button" title="Start bounding box" onclick="SetPolygonDrawingMode(true)" > \
+        if (bbox_mode) html_str4 += ' <button id="bounding_box" class="labelBtnDraw" type="button" title="Start bounding box" onclick="SetPolygonDrawingMode(true)" > \
         <img src="Icons/bounding.png"  width="28" height="38" /> \
         </button> ';
     html_str4 += '</div>';
