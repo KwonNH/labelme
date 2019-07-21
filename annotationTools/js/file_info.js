@@ -253,7 +253,7 @@ function file_info() {
 
 		$('#mt_submit_form').append(html_str3);
 
-		var html_str4 = '<div id= "polygonDiv" class="annotatemenu">Polygon<br></br>Tool \
+		var html_str4 = '<div id= "polygonDiv" class="annotatemenu"><br></br> \
         <button id="polygon" class="labelBtnDraw" type="button" title="Start Polygon" onclick="javascript:main_media.Zoom(1.15)" > \
         <img id="polygonModeImg" src="Icons/zoomin.png"  width="18" height="20" /> \
         </button> \
