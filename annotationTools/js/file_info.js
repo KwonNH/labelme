@@ -254,13 +254,13 @@ function file_info() {
 		$('#mt_submit_form').append(html_str3);
 
 		var html_str4 = '<div id= "zoom" class="zoommenu"><br></br> \
-        <button id="polygon" class="labelBtnDraw" type="button" title="Start Polygon" onclick="javascript:main_media.Zoom(1.15)" > \
+        <button id="zoomin" class="labelBtnDraw" type="button" title="Start Polygon" onclick="javascript:main_media.Zoom(1.15)" > \
         <img id="polygonModeImg" src="Icons/zoomin.png"  width="18" height="20" /> \
         </button> \
-        <button id="erase" class="labelBtnDraw" type="button" title="Delete last segment" onclick="javascript:main_media.Zoom(1.0/1.15)" > \
+        <button id="zoomout" class="labelBtnDraw" type="button" title="Delete last segment" onclick="javascript:main_media.Zoom(1.0/1.15)" > \
         <img src="Icons/zoomout.png" width="18" height="20" /> \
         </button> ';
-        if (bbox_mode) html_str4 += ' <button id="bounding_box" class="labelBtnDraw" type="button" title="Start bounding box" onclick="javascript:main_media.Zoom(\'fitted\')" > \
+        html_str4 += ' <button id="fit" class="labelBtnDraw" type="button" title="Start bounding box" onclick="javascript:main_media.Zoom(\'fitted\')" > \
         <img src="Icons/fitscreen.png"  width="18" height="20"  /> \
         </button> ';
     html_str4 += '</div>';
