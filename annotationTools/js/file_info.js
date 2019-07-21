@@ -252,6 +252,18 @@ function file_info() {
         var html_str3 = '<table><tr><td><font size="4"><b>' + this.mt_instructions + '  Scroll down to see the entire image. &#160;&#160;&#160; <input type="hidden" id="assignmentId" name="assignmentId" value="'+ this.assignmentId +'" /><input type="hidden" id="number_objects" name="number_objects" value="" /><input type="hidden" id="object_name" name="object_name" value="" /><input type="hidden" id="LMurl" name="LMurl" value="" /><input type="hidden" id="mt_comments" name="mt_comments" value="" /><input disabled="true" type="submit" id="mt_submit" name="Submit" value="Submit HIT" onmousedown="javascript:document.getElementById(\'mt_comments\').value=document.getElementById(\'mt_comments_textbox\').value; get_desc(\''+this.workerId+'\', \''+this.im_name+'\'); provide_code();" /></b></font></td><td></td></tr></table>';
 
 		$('#mt_submit_form').append(html_str3);
+
+		var html_str4 = '<div id= "polygonDiv" class="annotatemenu">Polygon<br></br>Tool \
+        <button id="polygon" class="labelBtnDraw" type="button" title="Start Polygon" onclick="SetPolygonDrawingMode(false)" > \
+        <img id="polygonModeImg" src="Icons/polygon.png"  width="28" height="38" /> \
+        </button> \
+        <button id="erase" class="labelBtnDraw" type="button" title="Delete last segment" onclick="main_handler.EraseSegment()" > \
+        <img src="Icons/erase.png"  width="28" height="38" /> \
+        </button> ';
+        if (bbox_mode) html_str += ' <button id="bounding_box" class="labelBtnDraw" type="button" title="Start bounding box" onclick="SetPolygonDrawingMode(true)" > \
+        <img src="Icons/bounding.png"  width="28" height="38" /> \
+        </button> ';
+    html_str4 += '</div>';
                 
         //var html_str2 = '<font size="4"><b>Scroll up to see the entire image</b></font>&#160;&#160;&#160;<font size="3">Describe the painting</font><br /><textarea id="mt_comments_textbox" name="mt_comments_texbox" cols="94" nrows="3" />';
 		//$('#mt_feedback').append(html_str2);
