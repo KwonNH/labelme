@@ -255,13 +255,13 @@ function file_info() {
 
 		var html_str4 = '<div id= "zoom" class="zoommenu"><br></br> \
         <button id="zoomin" class="labelBtnDraw" type="button" title="Start Polygon" onclick="javascript:main_media.Zoom(1.15)" > \
-        <img id="polygonModeImg" src="Icons/zoomin.png"  width="18" height="20" /> \
+        <img id="polygonModeImg" src="Icons/zoomin.png"  width="20" height="23" /> \
         </button> \
         <button id="zoomout" class="labelBtnDraw" type="button" title="Delete last segment" onclick="javascript:main_media.Zoom(1.0/1.15)" > \
-        <img src="Icons/zoomout.png" width="18" height="20" /> \
+        <img src="Icons/zoomout.png" width="20" height="23" /> \
         </button> ';
         html_str4 += ' <button id="fit" class="labelBtnDraw" type="button" title="Start bounding box" onclick="javascript:main_media.Zoom(\'fitted\')" > \
-        <img src="Icons/fitscreen.png"  width="18" height="20"  /> \
+        <img src="Icons/fitscreen.png"  width="20" height="23"  /> \
         </button> ';
     html_str4 += '</div>';
                 
