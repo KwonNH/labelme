@@ -268,7 +268,8 @@ function file_info() {
         //var html_str2 = '<font size="4"><b>Scroll up to see the entire image</b></font>&#160;&#160;&#160;<font size="3">Describe the painting</font><br /><textarea id="mt_comments_textbox" name="mt_comments_texbox" cols="94" nrows="3" />';
 		$('#mt_submit').append(html_str4);
 */
-
+$('#zoomin').attr("onclick","javascript:main_media.Zoom(1.15)");
+  $('#zoomout').attr("onclick","javascript:main_media.Zoom(1.0/1.15)");
 InitializeAnnotationTools('label_buttons_drawing','main_media');
                 if(global_count >= mt_N) document.getElementById('mt_submit').disabled=false;
             }
