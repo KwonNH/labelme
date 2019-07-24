@@ -253,7 +253,7 @@ function file_info() {
 
 		$('#mt_submit_form').append(html_str3);
 
-		var html_str4 = '<div id= "zoom" class="zoommenu"><br>Zoom In/Out Tools</br> \
+		var html_str4 = '<div id= "zoom" class="zoommenu">Zoom In/Out Tools \
         <button id="zoomin" class="labelBtnDraw" type="button" title="Zoom In" onclick="javascript:main_media.Zoom(1.15)" > \
         <img id="polygonModeImg" src="Icons/zoomin.png"  width="20" height="23" /> \
         </button> \
