@@ -248,7 +248,7 @@ function handler() {
       
       if((object_choices!='...') && (object_choices.length==1)) {
 	nn = RemoveSpecialChars(object_choices[0]);
-	  var re = /[a-zA-Z0-9]/;
+	  var re = /[가-힣ㄱ-ㅎㅏ-ㅣa-zA-Z0-9]/;
 	  if(!re.test(nn)) {
 	    alert('Please enter an object name');
 	    return;
@@ -270,7 +270,7 @@ function handler() {
       }
       else {
 	nn = RemoveSpecialChars(document.getElementById('objEnter').value);
-	var re = /[a-zA-Z0-9]/;
+	var re = /[가-힣ㄱ-ㅎㅏ-ㅣa-zA-Z0-9]/;
 	if(!re.test(nn)) {
 	   alert('Please enter an object name');
 	   return;
