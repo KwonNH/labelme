@@ -71,7 +71,7 @@ function handler() {
       if(document.getElementById('attributes')) new_desc = RemoveSpecialChars(document.getElementById('attributes').value);
       else new_desc = "";
       
-      var re = /[a-zA-Z0-9]/;
+      var re = /[a-zA-Z0-9ㄱ-ㅎㅏ-ㅣ가-힣]/;
       if(!re.test(new_name)) {
 	alert('Please enter an object name');
 	return;
