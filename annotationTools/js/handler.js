@@ -84,8 +84,8 @@ function handler() {
       
       if (use_attributes) {
       	// occlusion field
-      	if (document.getElementById('occluded')) new_occluded = RemoveSpecialChars(document.getElementById('occluded').value);
-      	else new_occluded = RemoveSpecialChars(adjust_occluded);
+      	//if (document.getElementById('occluded')) new_occluded = RemoveSpecialChars(document.getElementById('occluded').value);
+      	//else new_occluded = RemoveSpecialChars(adjust_occluded);
       	
       	// attributes field
       	if(document.getElementById('attributes')) new_attributes = RemoveSpecialChars(document.getElementById('attributes').value);
@@ -247,14 +247,14 @@ function handler() {
 	else new_attributes = "";
 	
 	// get occlusion field (is the field exists)
-	/*
+
 	if (document.getElementById('occluded')) new_occluded = RemoveSpecialChars(document.getElementById('occluded').value);
 	else new_occluded = "";
       }
 
       if((object_choices!='...') && (object_choices.length==1)) {
 	nn = RemoveSpecialChars(object_choices[0]);
-	*/
+	
 	  var re = /[가-힣ㄱ-ㅎㅏ-ㅣa-zA-Z0-9]/;
 	  if(!re.test(nn)) {
 	    alert('Please enter an object name');
