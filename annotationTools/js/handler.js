@@ -247,12 +247,14 @@ function handler() {
 	else new_attributes = "";
 	
 	// get occlusion field (is the field exists)
+	/*
 	if (document.getElementById('occluded')) new_occluded = RemoveSpecialChars(document.getElementById('occluded').value);
 	else new_occluded = "";
       }
-      
+
       if((object_choices!='...') && (object_choices.length==1)) {
 	nn = RemoveSpecialChars(object_choices[0]);
+	*/
 	  var re = /[가-힣ㄱ-ㅎㅏ-ㅣa-zA-Z0-9]/;
 	  if(!re.test(nn)) {
 	    alert('Please enter an object name');
