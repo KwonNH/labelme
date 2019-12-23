@@ -246,7 +246,7 @@ function file_info() {
         var desc_text = "test";
 
         //var html_str2 = '<font size="4"><b>Keywords that best describe the entire painting</b></font>&#160;&#160;&#160;<font size="3">Please list at least five keywords that best describe the entire painting.</font><br />';
-		var html_str2 = '<div id="desc" style="float:left; width:40%; height:500px; overflow:scroll"></div>';
+		var html_str2 = '<div id="desc" style="float:left; width:40%; height:500px; overflow:scroll; left-margin:500px"></div>';
 
 		$('#mt_feedback').append(html_str2);
 
