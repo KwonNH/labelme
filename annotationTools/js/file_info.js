@@ -243,8 +243,6 @@ function file_info() {
                 }
                 if(mt_N=='inf') mt_N = 1;
 
-        var desc_text = "test";
-
         //var html_str2 = '<font size="4"><b>Keywords that best describe the entire painting</b></font>&#160;&#160;&#160;<font size="3">Please list at least five keywords that best describe the entire painting.</font><br />';
 		var html_str2 = '<div id="desc" style="float:left; width:40%; height:500px; overflow:scroll; margin-left:40%; margin-top:20px"></div>';
 		var desc_title = '<div id="desc_title" style="margin-left:40%"><b>Scroll down to see the entire description.</b></div>';
