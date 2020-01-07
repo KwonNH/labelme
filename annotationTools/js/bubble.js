@@ -208,12 +208,12 @@ function GetPopupFormDraw(scribble_form) {
   html_str += HTMLobjectBox("");
   
   if(use_attributes) {
-    //html_str += HTMLoccludedBox("");
+    html_str += HTMLoccludedBox("");
     html_str += "<b>Please copy and paste the sentence that best describes the object you annotated.</b><br />";
     html_str += HTMLattributesBox("");
   }
   if(use_parts) {
-    //html_str += HTMLpartsBox("");
+    html_str += HTMLpartsBox("");
   }
   html_str += "<br />";
 
@@ -227,8 +227,8 @@ function GetPopupFormDraw(scribble_form) {
   if (!scribble_form) if (!bounding_box) html_str += '<input type="button" value="Undo close" title="Press this button if you accidentally closed the polygon. You can continue adding control points." onclick="UndoCloseButton();" tabindex="0" />';
   else if (scribble_form) html_str += '<input type="button" value="Edit Scribble" title="Press this button if to keep adding scribbles." onclick="KeepEditingScribbles();" tabindex="0" />';
   // Add parts/Stop adding parts
-  //if (add_parts_to == null) html_str += '<input type="button" value="Add parts" title="Press this button if you want to start adding parts" onclick="main_handler.StartAddParts();" tabindex="0" />';
-  //else html_str += '<input type="button" value="Stop parts" title="Press this button if you want to stop adding parts" onclick="main_handler.StopAddParts();" tabindex="0" />';
+  if (add_parts_to == null) html_str += '<input type="button" value="Add parts" title="Press this button if you want to start adding parts" onclick="main_handler.StartAddParts();" tabindex="0" />';
+  else html_str += '<input type="button" value="Stop parts" title="Press this button if you want to stop adding parts" onclick="main_handler.StopAddParts();" tabindex="0" />';
 
   return html_str;
 }
@@ -247,13 +247,13 @@ function GetPopupFormEdit(anno) {
   html_str += HTMLobjectBox(obj_name);
   
   if(use_attributes) {
-    //html_str += HTMLoccludedBox(occluded);
+    html_str += HTMLoccludedBox(occluded);
     html_str += "<b>Please list at least three keywords that best describe the object (location, color, size, shape, texture, etc.) or the person (gender, age, cloth, posture, facial expression, etc.)</b><br />";
     html_str += HTMLattributesBox(attributes);
   }
   
   if(use_parts) {
-    //html_str += HTMLpartsBox(parts);
+    html_str += HTMLpartsBox(parts);
   }
   
   html_str += "<br />";
@@ -271,10 +271,10 @@ function GetPopupFormEdit(anno) {
   html_str += '<input type="button" style="float:right" value="Delete" title="Press this button if you wish to delete the polygon." onclick="main_handler.EditBubbleDeleteButton();" tabindex="0" /><br />';
   // Adjust polygon button:
   if (anno.GetType() == 0) {
-    //html_str += '<input type="button" value="Adjust polygon" title="Press this button if you wish to update the polygon\'s control points." onclick="javascript:AdjustPolygonButton();" />';
+    html_str += '<input type="button" value="Adjust polygon" title="Press this button if you wish to update the polygon\'s control points." onclick="javascript:AdjustPolygonButton();" />';
   }
   else {
-    //html_str += '<input type="button" value="Edit Scribbles" title="Press this button if you wish to update the segmentation." onclick="javascript:EditBubbleEditScribble();" />';
+    html_str += '<input type="button" value="Edit Scribbles" title="Press this button if you wish to update the segmentation." onclick="javascript:EditBubbleEditScribble();" />';
   }
   /*************************************************************/
   /*************************************************************/
