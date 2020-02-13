@@ -130,13 +130,8 @@ function handler() {
         var idx = select_anno.GetAnnoID();
 
         if((IsUserAnonymous() || (!IsCreator(LMgetObjectField(LM_xml, idx, 'username')))) && (!IsUserAdmin()) && (idx<num_orig_anno) && !action_DeleteExistingObjects) {
-            if(username = 'master' || 'MASTER' || 'Master'){
-
-            }
-            else{
-                PermissionError();
-                return;
-            }
+            PermissionError();
+            return;
         }
         
         if(idx>=num_orig_anno) {
