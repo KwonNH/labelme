@@ -234,6 +234,10 @@ function GetPopupFormDraw(scribble_form) {
   return html_str;
 }
 
+function Translate(){
+    alert('translate');
+}
+
 function GetPopupFormEdit(anno) {
   // get object name and attributes from 'anno'
   edit_popup_open =  1;
@@ -283,9 +287,12 @@ function GetPopupFormEdit(anno) {
   
   // Add parts/Stop adding parts
   if (add_parts_to == null) //html_str += '<input type="button" value="Add parts" title="Press this button if you want to start adding parts" onclick="main_handler.StartAddParts();" tabindex="0" />';
-  if(GetMode() == "e"){
-    console.log('mode test');
+
+  var current_mode = document.URL.split('?')[1].split('&')[0].split('=')[1];
+  if(current_mode == "e"){
+    html_str += '<input type="button" value="Translate" title="Press this button if you wish to translate the name and the attributes of this object. onclick=javascript:Translate();" />';
   }
+
   return html_str;
 }
 
