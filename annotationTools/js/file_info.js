@@ -144,6 +144,12 @@ function file_info() {
                         action_ModifyControlExistingObjects = 0;
                         action_DeleteExistingObjects = 0;
                     }
+                    if(actions.indexOf('e')){
+                        action_CreatePolygon = 0;
+                        action_RenameExistingObjects = 1;
+                        action_ModifyControlExistingObjects = 1;
+                        action_DeleteExistingObjects = 0;
+                    }
                 }
                 if(par_field=='viewobj') {
                     // Get option for which polygons to see:
