@@ -209,7 +209,8 @@ function GetPopupFormDraw(scribble_form) {
   
   if(use_attributes) {
     html_str += HTMLoccludedBox("");
-    html_str += "<b>Please copy and paste the sentence that best describes the object you annotated.</b><br />";
+    //html_str += "<b>Please copy and paste the sentence that best describes the object you annotated.</b><br />";
+    html_str += "<b>Enter attributes</b><br />";
     html_str += HTMLattributesBox("");
   }
   if(use_parts) {
