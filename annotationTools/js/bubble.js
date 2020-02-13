@@ -291,9 +291,9 @@ function GetPopupFormEdit(anno) {
   // Translate button
   var current_mode = document.URL.split('?')[1].split('&')[0].split('=')[1];
   if(current_mode == "t"){
-    html_str += '<input type="button" value="Translate" title="Press this button if you wish to translate the name and the attributes of this object." onclick="javascript:Translate();" />';
+    //html_str += '<input type="button" value="Translate" title="Press this button if you wish to translate the name and the attributes of this object." onclick="javascript:Translate();" />';
     html_str += "<br />";
-    html_str += 'Translate to';
+    html_str += 'Translate to ';
 
     var language_choices = ['korean', 'chinese', 'japanese'];
 
@@ -303,6 +303,20 @@ function GetPopupFormEdit(anno) {
       html_str += '<option value="' + language_choices[i] + '">' + language_choices[i] + '</option>';
     }
     html_str += '</select></datalist>';
+
+    html_str += "<br />";
+    html_str += '<b>Translated object name</b>';
+    html_str += "<br />";
+
+    html_str += '<input name="objEnter_translated" id="objEnter_translated" type="text" style="width:220px;" tabindex="0" title="Enter the object\'s name here. Avoid application specific names, codes, long descriptions. Use a name you think other people would agree in using. "';
+
+    html_str += "<br />";
+    html_str += '<b>Translated attributes</b>';
+    html_str += "<br />";
+
+    html_str += '<input name="objAttr_translated" id="objAttr_translated" type="text" style="width:220px;" tabindex="0" title="Enter the object\'s name here. Avoid application specific names, codes, long descriptions. Use a name you think other people would agree in using. "';
+
+
   }
 
   return html_str;
