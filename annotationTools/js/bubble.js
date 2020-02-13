@@ -294,7 +294,15 @@ function GetPopupFormEdit(anno) {
     html_str += '<input type="button" value="Translate" title="Press this button if you wish to translate the name and the attributes of this object." onclick="javascript:Translate();" />';
     html_str += "<br />";
     html_str += 'Translate to';
-    html_str += '<select id="translate_language" name="translate_language"><option value="korean">korean</option><option value="chinese">chinese</option><option value="japanese">japanese</option></select>;';
+
+    languagelist = ['korean', 'chinese', 'japanese'];
+        
+    html_str += 'list="languagelist" />'; // insert list and close <input
+    html_str += '<datalist id="languagelist"><select style="display:none">';
+    for(var i = 0; i < language_choices.length; i++) {
+      html_str += '<option value="' + language_choices[i] + '">' + language_choices[i] + '</option>';
+    }
+    html_str += '</select></datalist>';
   }
 
   return html_str;
