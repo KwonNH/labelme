@@ -293,7 +293,7 @@ function GetPopupFormEdit(anno) {
   if(current_mode == "t"){
     html_str += '<input type="button" value="Translate" title="Press this button if you wish to translate the name and the attributes of this object." onclick="javascript:Translate();" />';
     html_str += '<br> Translate to';
-    html_str += '<select id="translate_language" name="translate_language"><option value="korean">korean</option><option value="chinese">chinese</option><option value="japanese">japanese</option></select>;';
+    //html_str += '<select id="translate_language" name="translate_language"><option value="korean">korean</option><option value="chinese">chinese</option><option value="japanese">japanese</option></select>;';
   }
 
   return html_str;
