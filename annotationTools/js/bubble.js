@@ -295,7 +295,7 @@ function GetPopupFormEdit(anno) {
     html_str += "<br />";
     html_str += 'Translate to';
 
-    var languagelist = ['korean', 'chinese', 'japanese'];
+    var language_choices = ['korean', 'chinese', 'japanese'];
 
     html_str += 'list="languagelist" />'; // insert list and close <input
     html_str += '<datalist id="languagelist"><select style="display:none">';
