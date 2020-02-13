@@ -308,13 +308,11 @@ function GetPopupFormEdit(anno) {
     html_str += '<b>Translated object name</b>';
     html_str += "<br />";
 
-    html_str += '<input name="objEnterTranslated" id="objEnterTranslated" type="text" style="width:220px;" tabindex="0" title="Enter the object\'s name here. Avoid application specific names, codes, long descriptions. Use a name you think other people would agree in using. "';
 
     html_str += "<br />";
     html_str += '<b>Translated attributes</b>';
     html_str += "<br />";
 
-    html_str += '<input name="objAttrTranslated" id="objAttrTranslated" type="text" style="width:220px;" tabindex="0" title="Enter the object\'s name here. Avoid application specific names, codes, long descriptions. Use a name you think other people would agree in using. "';
 
 
   }
