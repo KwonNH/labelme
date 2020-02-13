@@ -73,13 +73,13 @@ function handler() {
       
       var re = /[가-힣ㄱ-ㅎㅏ-ㅣa-zA-Z0-9]/;
       if(!re.test(new_name)) {
-	alert('Please enter an object name');
-	return;
+        alert('Please enter an object name');
+        return;
       }
 
       if(!re.test(new_desc)) {
-	alert('Please enter a description of the object');
-	return;
+        alert('Please enter a description of the object');
+        return;
       }
       
       if (use_attributes) {
