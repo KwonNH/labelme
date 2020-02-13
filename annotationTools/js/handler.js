@@ -92,6 +92,11 @@ function handler() {
       	if(document.getElementById('attributes')) new_attributes = RemoveSpecialChars(document.getElementById('attributes').value);
       	else new_attributes = RemoveSpecialChars(adjust_attributes);
       }
+
+      // edit mode - translate
+      if (document.URL.split('?')[1].split('&')[0].split('=')[1] == "t"){
+
+      }
       
       StopEditEvent();
       
