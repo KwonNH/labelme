@@ -235,7 +235,7 @@ function GetPopupFormDraw(scribble_form) {
 }
 
 function Translate(){
-    alert('translate');
+   console.log('translate');
 }
 
 function GetPopupFormEdit(anno) {
