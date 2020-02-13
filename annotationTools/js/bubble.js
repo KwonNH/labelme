@@ -288,9 +288,10 @@ function GetPopupFormEdit(anno) {
   // Add parts/Stop adding parts
   if (add_parts_to == null) //html_str += '<input type="button" value="Add parts" title="Press this button if you want to start adding parts" onclick="main_handler.StartAddParts();" tabindex="0" />';
 
+  // Translate button
   var current_mode = document.URL.split('?')[1].split('&')[0].split('=')[1];
   if(current_mode == "e"){
-    html_str += '<input type="button" value="Translate" title="Press this button if you wish to translate the name and the attributes of this object. onclick=javascript:Translate();" />';
+    html_str += '<input type="button" value="Translate" title="Press this button if you wish to translate the name and the attributes of this object." onclick="javascript:Translate();" />';
   }
 
   return html_str;
