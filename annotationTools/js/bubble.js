@@ -315,6 +315,8 @@ function GetPopupFormEdit(anno) {
     html_str += "<br />";
 
     html_str += '<textarea name="translatedAttributes" id="translatedAttributes" type="text" style="width:220px; height:3em;" tabindex="0" title="Enter a comma separated list of attributes, adjectives or other object properties"></textarea>';
+    html_str += "<br />";
+    html_str += '<input type="button" value="Submit" title="Press this button if you wish to translate the name and the attributes of this object." onclick="javascript:Translate();" />';
 
   }
 
