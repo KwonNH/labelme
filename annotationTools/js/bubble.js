@@ -318,6 +318,9 @@ function GetPopupFormEdit(anno) {
     html_str += "<br />";
     html_str += '<input type="button" value="Submit" title="Press this button if you wish to translate the name and the attributes of this object." onclick="javascript:Translate();" />';
 
+    var objEnter_elem = document.getElementById('objEnter')
+    objEnter_elem.readOnly = true;
+    
   }
 
   return html_str;
