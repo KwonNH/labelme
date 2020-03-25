@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Artwork Image Annotation</title>
+  <link rel="stylesheet" href="annotationTools/css/qunit-1.17.1.css" />
+    <style>
+        #instruction {
+          padding-top: 20px;
+          padding-right: 30px;
+          padding-bottom: 10px;
+          padding-left: 18%;
+        }
+        h1{
+          font-size: 35px;
+          line-height: 0.5em;
+        }
+        h2{
+          font-size: 30px;
+
+        }
+        h3{
+          font-size: 23px;
+        }
+        h4{
+          font-size: 18px;
+        }
+        #textbox{
+          padding-bottom: 100px;
+        }
+    </style>
+
+</head>
+<body>
+
+<center>
+
+<h1>
+    Artwork Image Annotation
+</h1>
+
+ <h3>
+        Please read the description of the painting before starting a task.
+    </h3>
+
+
+<div id="container">
+
+    <div id="title"></div>
+
+    <div id="painting" style="display: inline-block">
+
+        <img id = "image" style="width: 20%">
+
+    </div>
+    <div id="description" style="height:50%; width:60%; text-align:left">
+
+    </div>
+
+</div>
+
+    <h3>
+        Before you start your task, enter your name(worker ID) below.
+    </h3>
+
+<input type="text" id="worker_id" value="WorkerID">
+
+<button onclick="var workerid = get_worker_id(); var image_id = get_image_id();
+ location.href='http://labelme2.csail.mit.edu/Release3.0/tool.html?collection=LabelMe&mode=f&folder=users/nh2722///milano_expert&image='+image_id+'.jpg&username='+workerid">Submit</button>
+
+<script>
+function get_worker_id() {
+  var name = document.getElementById("worker_id").value;
+  return name;
+}
+function get_image_id(){
+   var name = window.location.href.split("=")[1];
+   return name;
+}
+function test(){
+    console.log("test");
+}
+
+function readTextFile(file)
+{
+    var rawFile = new XMLHttpRequest();
+    rawFile.open("GET", file, false);
+    rawFile.onreadystatechange = function ()
+    {
+        if(rawFile.readyState === 4)
+        {
+            if(rawFile.status === 200 || rawFile.status == 0)
+            {
+                var allText = rawFile.responseText;
+                alert(allText);
+            }
+        }
+    }
+    rawFile.send(null);
+}
+
+function get_image_name(image_id){
+    if(image_id =="1"){
+        return "The Kiss (Il bacio)"
+    }
+    else if(image_id == "2"){
+        return "Christ and the Woman of Samaria (Cristo e la Samaritana)"
+    }
+    else if(image_id == "3"){
+        return "Supper at Emmaus (Certificata Cena in Emmaus)"
+    }
+}
+
+document.getElementById('image').src = "./Images/milano/" + get_image_id() + ".jpg";
+
+document.getElementById('title').innerHTML = get_image_name(get_image_id());
+
+fetch('./Images/txt/'+get_image_id() + '.txt')
+  .then(response => response.text())
+  .then(text => document.getElementById('description').innerHTML = text)
+</script>
+
+</center>
+</body>
+</html>
